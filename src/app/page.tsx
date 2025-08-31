@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero";
-// import MockIelts from "../../components/Hero";
+import MockIelts from "../../components/MockIelts";
 
 export default function Home() {
   console.log("page working");
@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <main className="p-0">
         <Hero />
-        {/* <MockIelts /> */}
+        <MockIelts />
       </main>
     </div>
   );
