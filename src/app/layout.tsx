@@ -1,6 +1,15 @@
-import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import type { Metadata } from "next";
+
+// import { Geist, Geist_Mono } from "next/font/google";
+
+import { Toaster } from "../../components/ui/toaster";
+import { Toaster as Sonner } from "../../components/ui/sonner";
+import { SidebarProvider } from "../../components/ui/sidebar";
+import SimpleHeader from "../../components/SimpleHeader";
+import { AppSidebar } from "../../components/AppSidebar";
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -27,7 +36,23 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* <Toaster> */}
+          {/* <Sonner> */}
+            <SidebarProvider>
+              <div className="min-h-screen flex w-full">
+                <AppSidebar>
+                  <div className="flex-1 flex flex-col">
+                    <SimpleHeader>
+                      <main className="flex-1">
+                        {children}
+                      </main>
+                    </SimpleHeader>
+                  </div>
+              </AppSidebar>
+              </div>
+            </SidebarProvider>
+          {/* </Sonner> */}
+        {/* </Toaster> */}
       </body>
     </html>
   );
