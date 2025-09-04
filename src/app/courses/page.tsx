@@ -9,6 +9,7 @@ import { Badge } from "../../../components/ui/badge";
 import { BookOpen, PenTool, Headphones, Mic, Users, BookMarked, TrendingUp, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import axiosInstance from "../../../utils/axios";
+import axios from "axios";
 
 
 const Courses = () => {
@@ -104,7 +105,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get<{ data: Course[] }>("/courses");
+        const response = await axiosInstance.get<{ data: Course[] }>("/courses/");
         console.log(response.data.data);
         console.log('hi');
         setData(response.data.data);
