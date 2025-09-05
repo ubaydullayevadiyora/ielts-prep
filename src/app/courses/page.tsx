@@ -9,7 +9,6 @@ import { Badge } from "../../../components/ui/badge";
 import { BookOpen, PenTool, Headphones, Mic, Users, BookMarked, TrendingUp, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import axiosInstance from "../../../utils/axios";
-import axios from "axios";
 
 
 const Courses = () => {
